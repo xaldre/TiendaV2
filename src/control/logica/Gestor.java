@@ -2,7 +2,7 @@ package control.logica;
 
 import java.util.Set;
 
-import control.adaptador.GestorUnificado;
+import control.adaptador.AdaptadorDAO;
 import modelo.Articulo;
 import modelo.Pedido;
 import modelo.Cliente;
@@ -20,13 +20,13 @@ public class Gestor {
 	}
 
 	private boolean borraObjeto(Object obj, Tipo tipo) {
-		GestorUnificado gestor = new GestorUnificado(tipo);
+		AdaptadorDAO gestor = new AdaptadorDAO(tipo);
 		return gestor.borrar(obj);
 	}
 
 	private boolean borraLista(Object obj, Tipo tipo) {
 		// Necesito hacer dos operaciones por eso creo un objeto
-		GestorUnificado gestor = new GestorUnificado(tipo);
+		AdaptadorDAO gestor = new AdaptadorDAO(tipo);
 		// Obtengo la lista del gestor
 		Set lista = (Set) gestor.obtener();
 		// Borro el elemento de la lista
@@ -52,7 +52,7 @@ public class Gestor {
 	}
 
 	private boolean escribe(Object obj, Tipo tipo) {
-		return new GestorUnificado(tipo).escribir(obj);
+		return new AdaptadorDAO(tipo).escribir(obj);
 	}
 
 	public int buscar(Cliente obj) {
@@ -83,12 +83,12 @@ public class Gestor {
 	 * @return el valor de la pasocion en la que se encuentra o -1 si no existe
 	 */
 	private int buscaObjeto(Object obj) {
-		GestorUnificado buscador = new GestorUnificado(tipo);
+		AdaptadorDAO buscador = new AdaptadorDAO(tipo);
 		return buscador.buscar(obj);
 	}
 
 	private int buscaLista(Object obj, Tipo tipo) {
-		Set col = (Set) new GestorUnificado(tipo).obtener();
+		Set col = (Set) new AdaptadorDAO(tipo).obtener();
 		if (col.contains(obj)) {
 			return 0;
 		} else {

@@ -3,12 +3,12 @@ package control.adaptador;
 import modelo.DAO;
 import utiles.Tipo;
 
-public class GestorUnificado {
+public class AdaptadorDAO {
 	protected Tipo tipo;
 	protected DAO dao;
 
 	// obligo al que crea el objeto a decirme que tipo es
-	public GestorUnificado(Tipo tipo) {
+	public AdaptadorDAO(Tipo tipo) {
 		super();
 		this.tipo = tipo;
 	}

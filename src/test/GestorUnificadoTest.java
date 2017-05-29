@@ -8,17 +8,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 import Logica.antigua.GestorListas;
-import control.adaptador.GestorUnificado;
+import control.adaptador.AdaptadorDAO;
 import modelo.Cliente;
 import utiles.Tipo;
 
 public class GestorUnificadoTest {
-	GestorUnificado instancia;
+	AdaptadorDAO instancia;
 	ArrayList<Cliente> lista;
 	@Before
 	public void setUp() throws Exception {
 		
-		instancia=new GestorUnificado(Tipo.cliente);
+		instancia=new AdaptadorDAO(Tipo.cliente);
 		lista=new ArrayList<Cliente>();
 		lista.add(new Cliente("1", "Ataulfo"));
 		lista.add(new Cliente("2", "Humberto"));

@@ -3,15 +3,13 @@ package modelo;
 public class LineaPedido {
 	
 	private int numero;
-	private String referenciaArticulo;
-	private float precio;
+	private String referencia;
 	private int cantidad;
 
-	public LineaPedido(int numero, String referenciaArticulo, float precio, int cantidad) {
+	public LineaPedido(int numero, String referencia, int cantidad) {
 		super();
 		this.numero = numero;
-		this.referenciaArticulo = referenciaArticulo;
-		this.precio = precio;
+		this.referencia = referencia;
 		this.cantidad = cantidad;
 	}
 
@@ -24,19 +22,11 @@ public class LineaPedido {
 	}
 
 	public String getReferenciaArticulo() {
-		return referenciaArticulo;
+		return referencia;
 	}
 
-	public void setReferenciaArticulo(String referenciaArticulo) {
-		this.referenciaArticulo = referenciaArticulo;
-	}
-
-	public float getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(float precio) {
-		this.precio = precio;
+	public void setReferencia(String referencia) {
+		this.referencia = referencia;
 	}
 
 	public int getCantidad() {

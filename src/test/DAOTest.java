@@ -15,6 +15,7 @@ import modelo.Cliente;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DAOTest {
+	//TODO Rehacer todo el test y adaptarlo a el nuevo DAO
 	private static final boolean UNICO = true;
 	private static final String PRUEBALISTA_TST = "pruebalista.tst";
 	private static final String PRUEBAO_TST = "pruebaObj.tst";

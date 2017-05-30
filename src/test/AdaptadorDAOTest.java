@@ -12,7 +12,7 @@ import control.adaptador.AdaptadorDAO;
 import modelo.Cliente;
 import utiles.Tipo;
 
-public class GestorUnificadoTest {
+public class AdaptadorDAOTest {
 	AdaptadorDAO instancia;
 	ArrayList<Cliente> lista;
 	@Before

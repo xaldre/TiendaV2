@@ -8,7 +8,7 @@ import modelo.Pedido;
 import modelo.Cliente;
 import utiles.Tipo;
 
-public class Gestor {
+public class Gestor implements iGestorAlta, iGestorConsulta {
 	Tipo tipo;
 
 	private boolean borra(Object obj, Tipo tipo) {

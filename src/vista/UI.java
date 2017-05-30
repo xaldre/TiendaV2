@@ -18,16 +18,16 @@ import javax.swing.JMenuItem;
 public class UI extends JFrame {
 
 	protected JPanel contentPane;
-	private JMenuBar menuBar;
-	private JMenu mnCleinte;
-	private JMenu mnNewMenu;
-	private JMenu mnConsulta;
-	private JMenuItem mntmConsulta;
-	private JMenuItem mntmAlta_1;
-	private JMenuItem mntmConsulta_1;
-	private JMenuItem mntmAlta_2;
-	private JMenuItem mntmConsulta_2;
-	private JMenuItem mntmAlta;
+	protected JMenuBar menuBar;
+	protected JMenu mnCleinte;
+	protected JMenu mnNewMenu;
+	protected JMenu mnConsulta;
+	protected JMenuItem mntmConsulta;
+	protected JMenuItem mntmAlta_1;
+	protected JMenuItem mntmConsulta_1;
+	protected JMenuItem mntmAlta_2;
+	protected JMenuItem mntmConsulta_2;
+	protected JMenuItem mntmAlta;
 
 	
 

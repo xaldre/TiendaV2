@@ -1,4 +1,4 @@
-package vista;
+package vista.articulo;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -15,9 +15,9 @@ import javax.swing.JTextPane;
 
 public class altaArticulo extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField txtPrecioArticulo;
-	private JTextField textField;
+	protected JPanel contentPane;
+	protected JTextField txtPrecioArticulo;
+	protected JTextField textField;
 
 	/**
 	 * Launch the application.

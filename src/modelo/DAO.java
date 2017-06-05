@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import utiles.Constantes;
 
@@ -77,21 +78,21 @@ public class DAO {
 	 */
 	public Object leer() {
 		File archivo = new File(path);
-		Object socio = null;
+		Object obj = null;
 		try {
 			// este es el if que controla si el flujo debe abrirse o no
 			if (unico || adaptadorLectura == null) {
 				FileInputStream flujoEntrada = new FileInputStream(archivo);
 				adaptadorLectura = new ObjectInputStream(flujoEntrada);
 			}
-			socio = adaptadorLectura.readObject();
+			obj = adaptadorLectura.readObject();
 			// este controla si debe cerrarse o no
 			if (unico)
-				adaptadorLectura.close();
+				cerrar();
 			else {
 				// si tras una operacion de lectura el resultado ha sido null
 				// implica ue el flujo ha llegado al final del fichero
-				if (socio == null) {
+				if (obj == null) {
 					adaptadorLectura.close();
 				}
 			}
@@ -106,7 +107,7 @@ public class DAO {
 			if (Constantes.errores)
 				e.printStackTrace();
 		}
-		return socio;
+		return obj;
 	}
 
 	public boolean borrar(int posicion) {
@@ -156,13 +157,55 @@ public class DAO {
 		}
 	}
 
+	/**
+	 * Solicita el retorno de un objeto que concuerde con el objeto introducido
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return El objeto encontrado, en caso de que coincidan, null en caso de
+	 *         que no.
+	 */
+	public Object obtener(Object obj) {
+		// Nos aseguramos que esté cerrado antes de comenzar
+		cerrar();
+		if (unico) {
+			// Si es una lista
+			ArrayList<?> lista = (ArrayList<?>) leer();
+			int pos = lista.indexOf(obj);
+			if (pos!= -1){
+				lista.get(pos);
+			} else {
+				return null;
+			}
+			return lista.get(pos);
+		} else {
+			int pos = buscar(obj);
+			if (pos != -1) {
+				Object found = null;
+				// Si es un objeto
+				for (int i = 0; i <= pos; i++) {
+					found = leer();
+				}
+				// cerrar el flujo al finalizar
+				cerrar();
+				return found;
+			} else {
+				return null;
+			}
+			
+		}
+	}
+
 	private boolean comparar(Object comparador, Object obj) {
 		return comparador.equals(obj);
 	}
 
 	private void cerrar() {
 		try {
-			adaptadorLectura.close();
+			if (adaptadorLectura != null) {
+				adaptadorLectura.close();
+				adaptadorLectura = null;
+			}
 		} catch (IOException e) {
 		}
 	}

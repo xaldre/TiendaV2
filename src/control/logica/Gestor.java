@@ -1,5 +1,6 @@
 package control.logica;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 import control.adaptador.AdaptadorDAO;
@@ -8,7 +9,7 @@ import modelo.Pedido;
 import modelo.Cliente;
 import utiles.Tipo;
 
-public class Gestor {
+public class Gestor implements iGestorAlta, iGestorConsulta {
 	Tipo tipo;
 
 	private boolean borra(Object obj, Tipo tipo) {
@@ -28,7 +29,7 @@ public class Gestor {
 		// Necesito hacer dos operaciones por eso creo un objeto
 		AdaptadorDAO gestor = new AdaptadorDAO(tipo);
 		// Obtengo la lista del gestor
-		Set lista = (Set) gestor.obtener();
+		Set lista = (Set) gestor.getNext();
 		// Borro el elemento de la lista
 		boolean borrado = lista.remove(obj);
 		// Si lo borra bien debemos volver a grabar la nueva lista en el fichero
@@ -54,6 +55,37 @@ public class Gestor {
 	private boolean escribe(Object obj, Tipo tipo) {
 		return new AdaptadorDAO(tipo).escribir(obj);
 	}
+
+	/**
+	 * Solicita el retorno de un objeto que concuerde con el objeto introducido
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return El objeto encontrado, en caso de que coincidan, null en caso de
+	 *         que no.
+	 */
+
+	public Pedido obtener(Pedido obj) {
+		// TODO rellenar
+		return null;
+	}
+
+	public Cliente obtener(Cliente obj) {
+		// TODO rellenar
+		return null;
+	}
+
+	public Articulo obtener(Articulo obj) {
+		// TODO rellenar
+		return null;
+	}
+
+	private Object get(Object obj, Tipo tipo) {
+		// TODO rellenar
+		return null;
+	}
+
+	
 
 	public int buscar(Cliente obj) {
 		return busca(obj, Tipo.cliente);
@@ -88,7 +120,7 @@ public class Gestor {
 	}
 
 	private int buscaLista(Object obj, Tipo tipo) {
-		Set col = (Set) new AdaptadorDAO(tipo).obtener();
+		Set col = (Set) new AdaptadorDAO(tipo).getNext();
 		if (col.contains(obj)) {
 			return 0;
 		} else {

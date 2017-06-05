@@ -22,7 +22,7 @@ public class AdaptadorDAO {
 		return dao.grabar(obj);
 	}
 
-	public Object obtener() {
+	public Object getNext() {
 		dao = new DAO(tipo.getRuta(), tipo.isLista());
 		return dao.leer();
 	}

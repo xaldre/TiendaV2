@@ -49,6 +49,7 @@ public class AdaptadorDAO {
 	 * 
 	 * @return ArrayList con elementos
 	 */
+	private Object getAll() {
 		if (tipo.isLista()) {
 			return getNext();
 		} else {

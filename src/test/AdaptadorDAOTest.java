@@ -5,35 +5,68 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
-import Logica.antigua.GestorListas;
 import control.adaptador.AdaptadorDAO;
 import modelo.Cliente;
 import utiles.Tipo;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AdaptadorDAOTest {
-	AdaptadorDAO instancia;
-	ArrayList<Cliente> lista;
+
+	AdaptadorDAO adaptadorCliente = new AdaptadorDAO(Tipo.cliente);
+	ArrayList<Cliente> lista = new ArrayList<Cliente>();
+
 	@Before
-	public void setUp() throws Exception {
-		
-		instancia=new AdaptadorDAO(Tipo.cliente);
-		lista=new ArrayList<Cliente>();
-		lista.add(new Cliente("1", "Ataulfo"));
-		lista.add(new Cliente("2", "Humberto"));
-		lista.add(new Cliente("3", "Jeremias"));
-		lista.add(new Cliente("4", "Diocleciano"));
-		instancia.escribir(lista);
+	public void setUp() {
+		lista.add(new Cliente("53573141T", "Carlos Rodrigo SMV"));
+		lista.add(new Cliente("20202020H", "Herna"));
+		lista.add(new Cliente("99999999Z", "pablo"));
+		lista.add(new Cliente("777", "ghost"));
+		adaptadorCliente.escribir(lista);
 	}
 
 	@Test
-	public void test01Escribir() {
+	public void test10Escribir() {
+		// TODO completar
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void test02Obtener() {
+	public void test20GetNext() {
+		// TODO completar
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void test20GetAll() {
+		// TODO completar
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void test30Buscar() {
+		// TODO completar
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void test40Exist() {
+		// TODO completar
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void test50Obtener() {
+		// TODO completar
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void test60Borrar() {
+		// TODO completar
 		fail("Not yet implemented");
 	}
 

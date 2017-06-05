@@ -1,8 +1,6 @@
 package control.logica;
 
-import java.util.ArrayList;
 import java.util.Set;
-
 import control.adaptador.AdaptadorDAO;
 import modelo.Articulo;
 import modelo.Pedido;
@@ -94,23 +92,51 @@ public class Gestor implements iGestorAlta, iGestorConsulta {
 
 	private Object get(Object obj, Tipo tipo) {
 		AdaptadorDAO gestor = new AdaptadorDAO(tipo);
-		if (gestor.exist(obj)){
+		if (gestor.exist(obj)) {
 			return gestor.obtener(obj);
 		} else {
 			return null;
 		}
 	}
 
-	
-
+	/**
+	 * Busca la posicion de un objeto en un archivo de persistencia
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return la posicion que ocupa dentro del objeto de persistencia, o -1 si
+	 *         no se encuentra
+	 * @deprecated usa {@link #obtener(Cliente obj)} en su lugar.
+	 */
+	@Deprecated
 	public int buscar(Cliente obj) {
 		return busca(obj, Tipo.cliente);
 	}
 
+	/**
+	 * Busca la posicion de un objeto en un archivo de persistencia
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return la posicion que ocupa dentro del objeto de persistencia, o -1 si
+	 *         no se encuentra
+	 * @deprecated usa {@link #obtener(Articulo obj)} en su lugar.
+	 */
+	@Deprecated
 	public int buscar(Articulo obj) {
 		return busca(obj, Tipo.articulo);
 	}
 
+	/**
+	 * Busca la posicion de un objeto en un archivo de persistencia
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return la posicion que ocupa dentro del objeto de persistencia, o -1 si
+	 *         no se encuentra
+	 * @deprecated usa {@link #obtener(Pedido obj)} en su lugar.
+	 */
+	@Deprecated
 	public int buscar(Pedido obj) {
 		return busca(obj, Tipo.pedido);
 	}

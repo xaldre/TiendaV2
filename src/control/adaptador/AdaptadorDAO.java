@@ -31,6 +31,16 @@ public class AdaptadorDAO {
 		dao = new DAO(tipo.getRuta(), tipo.isLista());
 		return dao.buscar(obj);
 	}
+	
+	public boolean exist(Object obj){
+		dao = new DAO(tipo.getRuta(),tipo.isLista());
+		return dao.exist(obj);		
+	}
+	
+	public Object obtener(Object obj){
+		dao = new DAO(tipo.getRuta(),tipo.isLista());
+		return dao.obtener(obj);
+	}
 
 	public boolean borrar(Object obj) {
 		DAO dao = new DAO(tipo.getRuta(), tipo.isLista());

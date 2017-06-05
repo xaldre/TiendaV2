@@ -1,8 +1,6 @@
 package control.logica;
 
-import java.util.ArrayList;
 import java.util.Set;
-
 import control.adaptador.AdaptadorDAO;
 import modelo.Articulo;
 import modelo.Pedido;
@@ -60,41 +58,85 @@ public class Gestor implements iGestorAlta, iGestorConsulta {
 	 * Solicita el retorno de un objeto que concuerde con el objeto introducido
 	 * 
 	 * @param obj
-	 *            El objeto a buscar
+	 *            El Pedido a buscar
 	 * @return El objeto encontrado, en caso de que coincidan, null en caso de
 	 *         que no.
 	 */
-
 	public Pedido obtener(Pedido obj) {
-		// TODO rellenar
-		return null;
+		return (Pedido) get(obj, tipo);
 	}
 
+	/**
+	 * Solicita el retorno de un objeto que concuerde con el objeto introducido
+	 * 
+	 * @param obj
+	 *            El Cliente a buscar
+	 * @return El objeto encontrado, en caso de que coincidan, null en caso de
+	 *         que no.
+	 */
 	public Cliente obtener(Cliente obj) {
-		// TODO rellenar
-		return null;
+		return (Cliente) get(obj, tipo);
 	}
 
+	/**
+	 * Solicita el retorno de un objeto que concuerde con el objeto introducido
+	 * 
+	 * @param obj
+	 *            El Articulo a buscar
+	 * @return El objeto encontrado, en caso de que coincidan, null en caso de
+	 *         que no.
+	 */
 	public Articulo obtener(Articulo obj) {
-		// TODO rellenar
-		return null;
+		return (Articulo) get(obj, tipo);
 	}
 
 	private Object get(Object obj, Tipo tipo) {
-		// TODO rellenar
-		return null;
+		AdaptadorDAO gestor = new AdaptadorDAO(tipo);
+		if (gestor.exist(obj)) {
+			return gestor.obtener(obj);
+		} else {
+			return null;
+		}
 	}
 
-	
-
+	/**
+	 * Busca la posicion de un objeto en un archivo de persistencia
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return la posicion que ocupa dentro del objeto de persistencia, o -1 si
+	 *         no se encuentra
+	 * @deprecated usa {@link #obtener(Cliente obj)} en su lugar.
+	 */
+	@Deprecated
 	public int buscar(Cliente obj) {
 		return busca(obj, Tipo.cliente);
 	}
 
+	/**
+	 * Busca la posicion de un objeto en un archivo de persistencia
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return la posicion que ocupa dentro del objeto de persistencia, o -1 si
+	 *         no se encuentra
+	 * @deprecated usa {@link #obtener(Articulo obj)} en su lugar.
+	 */
+	@Deprecated
 	public int buscar(Articulo obj) {
 		return busca(obj, Tipo.articulo);
 	}
 
+	/**
+	 * Busca la posicion de un objeto en un archivo de persistencia
+	 * 
+	 * @param obj
+	 *            El objeto a buscar
+	 * @return la posicion que ocupa dentro del objeto de persistencia, o -1 si
+	 *         no se encuentra
+	 * @deprecated usa {@link #obtener(Pedido obj)} en su lugar.
+	 */
+	@Deprecated
 	public int buscar(Pedido obj) {
 		return busca(obj, Tipo.pedido);
 	}

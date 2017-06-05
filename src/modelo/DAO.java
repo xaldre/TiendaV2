@@ -172,7 +172,7 @@ public class DAO {
 			// Si es una lista
 			ArrayList<?> lista = (ArrayList<?>) leer();
 			int pos = lista.indexOf(obj);
-			if (pos!= -1){
+			if (pos != -1) {
 				lista.get(pos);
 			} else {
 				return null;
@@ -192,8 +192,12 @@ public class DAO {
 			} else {
 				return null;
 			}
-			
+
 		}
+	}
+
+	public boolean exist(Object obj) {
+		return (buscar(obj) != -1) ? true : false;
 	}
 
 	private boolean comparar(Object comparador, Object obj) {

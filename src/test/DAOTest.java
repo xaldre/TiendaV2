@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 import org.junit.Before;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import modelo.DAO;
 import modelo.Cliente;
 
@@ -42,7 +42,7 @@ public class DAOTest {
 		assertTrue(instanciaLista.grabar(lista));
 	}
 
-	@Ignore
+	@Test
 	public void test02Leer() {
 		ArrayList<?> listaActual = (ArrayList<?>) instanciaLista.leer();
 		// delegar la responsabilidad de la compararcion en el propio objeto que

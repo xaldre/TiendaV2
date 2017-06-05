@@ -1,23 +1,30 @@
-package vista.articulo;
+package vista.pedido;
 
 import javax.swing.JPanel;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
 import java.awt.Insets;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JTable;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import javax.swing.JScrollPane;
 
-public class altaArticuloPane extends JPanel {
+public class altaPedidoPane extends JPanel {
 	private JTextField txtCliente;
 	private JTable table;
 
 	/**
 	 * Create the panel.
 	 */
-	public altaArticuloPane() {
+	public altaPedidoPane() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 47, 0, 0, 0, 0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0};
@@ -82,6 +89,9 @@ public class altaArticuloPane extends JPanel {
 		gbc_table.gridx = 1;
 		gbc_table.gridy = 5;
 		add(table, gbc_table);
+		
+		String[] columnas = {"Id", "Nombre", "Cantidad", "Precio"};
+		DefaultTableModel modeloTabla = new DefaultTableModel(columnas,  0);
 
 	}
 

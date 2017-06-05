@@ -83,6 +83,7 @@ public class altaPedidoPane extends JPanel {
 		
 		table = new JTable();
 		GridBagConstraints gbc_table = new GridBagConstraints();
+		gbc_table.gridwidth = 6;
 		gbc_table.insets = new Insets(0, 0, 5, 5);
 		gbc_table.fill = GridBagConstraints.BOTH;
 		gbc_table.gridx = 1;

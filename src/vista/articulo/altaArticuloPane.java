@@ -88,10 +88,12 @@ public class AltaArticuloPane extends JPanel {
           gbc_txtDescripcion.gridy = 5;
           add(txtDescripcion, gbc_txtDescripcion);
           
+           JButton btnCancelar = new JButton("Cancelar");
            GridBagConstraints gbc_btnCancelar = new GridBagConstraints();
            gbc_btnCancelar.insets = new Insets(0, 0, 5, 5);
            gbc_btnCancelar.gridx = 4;
            gbc_btnCancelar.gridy = 7;
+           add(btnCancelar, gbc_btnCancelar);
  
     }
  

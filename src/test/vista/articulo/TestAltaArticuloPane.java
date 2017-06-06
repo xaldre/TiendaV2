@@ -1,18 +1,10 @@
 package test.vista.articulo;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
 import vista.articulo.AltaArticuloPane;
-import vista.cliente.altaClientePane;
 
 public class TestAltaArticuloPane extends JFrame {
-
-//	private JPanel contentPane;
 
 	/**
 	 * Launch the application.

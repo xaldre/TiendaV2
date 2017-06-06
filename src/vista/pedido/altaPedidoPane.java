@@ -18,12 +18,12 @@ import java.awt.Dimension;
 import javax.swing.JScrollPane;
 
 public class AltaPedidoPane extends JPanel {
-	private JTextField txtCliente;
-	private JTable table;
-	private JButton btnCancelar;
-	private JButton btnCrearPedido;
-	private JButton btnAgregar;
-	private JComboBox cBoxArticulo;
+	protected JTextField txtCliente;
+	protected JTable table;
+	protected JButton btnCancelar;
+	protected JButton btnCrearPedido;
+	protected JButton btnAgregar;
+	protected JComboBox cBoxArticulo;
 
 	/**
 	 * Create the panel.

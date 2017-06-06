@@ -9,9 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 public class ConsultaClientePane extends JPanel {
-	private JTextField txtNombre;
-	private JTextField txtApellidos;
-	private JTextField txtDNI;
+	protected JTextField txtNombre;
+	protected JTextField txtApellidos;
+	protected JTextField txtDNI;
 
 	/**
 	 * Create the panel.

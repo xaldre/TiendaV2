@@ -1,14 +1,10 @@
-package test.vista.articulo;
+package test.vista.pedido;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import vista.articulo.ConsultaArticuloPane;
+import vista.pedido.AltaPedidoPane;
 
-public class TestConsultaArticuloPane extends JFrame {
-
-	private JPanel contentPane;
-
+public class TestAltaPedidoPane extends JFrame {
 	/**
 	 * Launch the application.
 	 */
@@ -16,7 +12,7 @@ public class TestConsultaArticuloPane extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TestConsultaArticuloPane frame = new TestConsultaArticuloPane();
+					TestAltaPedidoPane frame = new TestAltaPedidoPane();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -28,10 +24,10 @@ public class TestConsultaArticuloPane extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TestConsultaArticuloPane() {
+	public TestAltaPedidoPane() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		setContentPane(new ConsultaArticuloPane());
+		setContentPane(new AltaPedidoPane());
 	}
 
 }

@@ -17,17 +17,21 @@ import java.awt.Cursor;
 import java.awt.Dimension;
 import javax.swing.JScrollPane;
 
-public class altaPedidoPane extends JPanel {
+public class AltaPedidoPane extends JPanel {
 	private JTextField txtCliente;
 	private JTable table;
+	private JButton btnCancelar;
+	private JButton btnCrearPedido;
+	private JButton btnAgregar;
+	private JComboBox cBoxArticulo;
 
 	/**
 	 * Create the panel.
 	 */
-	public altaPedidoPane() {
+	public AltaPedidoPane() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 47, 0, 0, 0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0};
+		gridBagLayout.columnWidths = new int[]{10, 0, 0, 47, 0, 0, 0, 10, 0};
+		gridBagLayout.rowHeights = new int[]{10, 0, 5, 0, 0, 0, 5, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
@@ -49,16 +53,24 @@ public class altaPedidoPane extends JPanel {
 		add(txtCliente, gbc_txtCliente);
 		txtCliente.setColumns(10);
 		
-		JLabel lblSeleccioneUnArtculo = new JLabel("Seleccione un art\u00EDculo:");
-		GridBagConstraints gbc_lblSeleccioneUnArtculo = new GridBagConstraints();
-		gbc_lblSeleccioneUnArtculo.anchor = GridBagConstraints.WEST;
-		gbc_lblSeleccioneUnArtculo.gridwidth = 3;
-		gbc_lblSeleccioneUnArtculo.insets = new Insets(0, 0, 5, 5);
-		gbc_lblSeleccioneUnArtculo.gridx = 1;
-		gbc_lblSeleccioneUnArtculo.gridy = 3;
-		add(lblSeleccioneUnArtculo, gbc_lblSeleccioneUnArtculo);
+		btnCancelar = new JButton("Cancelar");
+		GridBagConstraints gbc_btnCancelar = new GridBagConstraints();
+		gbc_btnCancelar.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnCancelar.insets = new Insets(0, 0, 5, 5);
+		gbc_btnCancelar.gridx = 6;
+		gbc_btnCancelar.gridy = 1;
+		add(btnCancelar, gbc_btnCancelar);
 		
-		JComboBox cBoxArticulo = new JComboBox();
+		JLabel lblSeleccioneArticulo = new JLabel("Seleccione un art\u00EDculo:");
+		GridBagConstraints gbc_lblSeleccioneArticulo = new GridBagConstraints();
+		gbc_lblSeleccioneArticulo.anchor = GridBagConstraints.WEST;
+		gbc_lblSeleccioneArticulo.gridwidth = 3;
+		gbc_lblSeleccioneArticulo.insets = new Insets(0, 0, 5, 5);
+		gbc_lblSeleccioneArticulo.gridx = 1;
+		gbc_lblSeleccioneArticulo.gridy = 3;
+		add(lblSeleccioneArticulo, gbc_lblSeleccioneArticulo);
+		
+		cBoxArticulo = new JComboBox();
 		GridBagConstraints gbc_cBoxArticulo = new GridBagConstraints();
 		gbc_cBoxArticulo.gridwidth = 3;
 		gbc_cBoxArticulo.insets = new Insets(0, 0, 5, 5);
@@ -67,15 +79,16 @@ public class altaPedidoPane extends JPanel {
 		gbc_cBoxArticulo.gridy = 4;
 		add(cBoxArticulo, gbc_cBoxArticulo);
 		
-		JButton btnAgregar = new JButton("Agregar");
+		btnAgregar = new JButton("Agregar");
 		GridBagConstraints gbc_btnAgregar = new GridBagConstraints();
 		gbc_btnAgregar.insets = new Insets(0, 0, 5, 5);
 		gbc_btnAgregar.gridx = 4;
 		gbc_btnAgregar.gridy = 4;
 		add(btnAgregar, gbc_btnAgregar);
 		
-		JButton btnCrearPedido = new JButton("Crear pedido");
+		btnCrearPedido = new JButton("Crear pedido");
 		GridBagConstraints gbc_btnCrearPedido = new GridBagConstraints();
+		gbc_btnCrearPedido.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnCrearPedido.insets = new Insets(0, 0, 5, 5);
 		gbc_btnCrearPedido.gridx = 6;
 		gbc_btnCrearPedido.gridy = 4;

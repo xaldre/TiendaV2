@@ -14,6 +14,7 @@ import java.awt.GridBagConstraints;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import java.awt.CardLayout;
 
 public class UI extends JFrame {
 
@@ -71,12 +72,7 @@ public class UI extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.columnWidths = new int[]{0, 0};
-		gbl_contentPane.rowHeights = new int[]{0, 0};
-		gbl_contentPane.columnWeights = new double[]{0.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, Double.MIN_VALUE};
-		contentPane.setLayout(gbl_contentPane);
+		contentPane.setLayout(new CardLayout(0, 0));
 	}
 
 }

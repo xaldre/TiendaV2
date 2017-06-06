@@ -6,9 +6,9 @@ import modelo.Pedido;
 
 public interface iGestorConsulta {
 
-	public int buscar(Cliente obj);
+	public Cliente obtener(Cliente obj);
 
-	public int buscar(Articulo obj);
+	public Articulo obtener(Articulo obj);
 
-	public int buscar(Pedido obj);
+	public Pedido obtener(Pedido obj);
 }

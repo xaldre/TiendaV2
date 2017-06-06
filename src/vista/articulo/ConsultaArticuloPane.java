@@ -13,13 +13,13 @@ import javax.swing.JButton;
 import javax.swing.JTable;
 
 public class ConsultaArticuloPane extends JPanel {
-	private JTextField txtCliente;
-	private JTable table;
-	private JTextField txtReferencia;
-	private JTextField txtNombre;
-	private JTextField txtPrecio;
-	private JTextField txtDescripcion;
-	private JButton btnCancelar;
+	protected JTextField txtCliente;
+	protected JTable table;
+	protected JTextField txtReferencia;
+	protected JTextField txtNombre;
+	protected JTextField txtPrecio;
+	protected JTextField txtDescripcion;
+	protected JButton btnCancelar;
 
 	/**
 	 * Create the panel.

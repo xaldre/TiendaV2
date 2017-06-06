@@ -12,8 +12,8 @@ import javax.swing.JTextPane;
 import javax.swing.JButton;
  
 public class AltaArticuloPane extends JPanel {
-    private JTextField txtNombre;
-    private JTextField txtPrecio;
+    protected JTextField txtNombre;
+    protected JTextField txtPrecio;
  
     /**
      * Create the panel.

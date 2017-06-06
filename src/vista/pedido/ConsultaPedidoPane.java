@@ -14,11 +14,11 @@ import javax.swing.JTable;
 
 public class ConsultaPedidoPane extends JPanel {
 
-	private JTable table;
-	private JTextField textNumeroPedido;
-	private JTextField textFecha;
-	private JTextField textDNI;
-	private JTextField textLineaPedido;
+	protected JTable table;
+	protected JTextField textNumeroPedido;
+	protected JTextField textFecha;
+	protected JTextField textDNI;
+	protected JTextField textLineaPedido;
 
 	/**
 	 * Create the panel.

@@ -20,11 +20,8 @@ public class ParaAltaArticuloPane extends AltaArticuloPane {
 		
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
-
-//				CardLayout layout = (CardLayout) contentPane.getLayout();
-				
-//				layout.show(contentPane, "consultaPedido");
+				CardLayout layout = (CardLayout) ui.paraCardPane.getLayout();
+				layout.show(ui.paraCardPane, "hall");
 			}
 		});
 		

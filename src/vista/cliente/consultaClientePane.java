@@ -12,6 +12,8 @@ public class ConsultaClientePane extends JPanel {
 	protected JTextField txtNombre;
 	protected JTextField txtApellidos;
 	protected JTextField txtDNI;
+	protected JButton btnCancelar;
+	protected JButton btnConsultar;
 
 	/**
 	 * Create the panel.
@@ -41,7 +43,7 @@ public class ConsultaClientePane extends JPanel {
 		add(txtDNI, gbc_txtDNI);
 		txtDNI.setColumns(10);
 		
-		JButton btnConsultar = new JButton("Consultar");
+		btnConsultar = new JButton("Consultar");
 		GridBagConstraints gbc_btnConsultar = new GridBagConstraints();
 		gbc_btnConsultar.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnConsultar.insets = new Insets(0, 0, 5, 5);
@@ -87,7 +89,7 @@ public class ConsultaClientePane extends JPanel {
 		add(txtNombre, gbc_txtNombre);
 		txtNombre.setColumns(10);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar = new JButton("Cancelar");
 		GridBagConstraints gbc_btnCancelar = new GridBagConstraints();
 		gbc_btnCancelar.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnCancelar.insets = new Insets(0, 0, 5, 5);

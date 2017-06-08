@@ -24,6 +24,9 @@ public class ImagePanel extends JPanel {
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 //		g.drawImage(image, 0, 0, this); // see javadoc for more info on the parameters
+		
+		int initialX = (int) ((this.getWidth()*0.5)-(image.getWidth()*0.5));
+		
 		g.drawImage(image, 0, 0, this.getWidth(), this.getHeight(), 0, 0, image.getWidth(), image.getHeight(), this);
 	}
 

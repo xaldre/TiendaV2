@@ -20,15 +20,15 @@ public class UI extends JFrame {
 
 	protected JPanel cardPane;
 	protected JMenuBar menuBar;
-	protected JMenu mnCleinte;
-	protected JMenu mnNewMenu;
-	protected JMenu mnConsulta;
-	protected JMenuItem mntmConsulta;
-	protected JMenuItem mntmAlta_1;
-	protected JMenuItem mntmConsulta_1;
-	protected JMenuItem mntmAlta_2;
-	protected JMenuItem mntmConsulta_2;
-	protected JMenuItem mntmAlta;
+	protected JMenu mnCliente;
+	protected JMenu mnArticulo;
+	protected JMenu mnPedido;
+	protected JMenuItem mntmConsultaCliente;
+	protected JMenuItem mntmAltaArticulo;
+	protected JMenuItem mntmConsultaArticulo;
+	protected JMenuItem mntmAltaPedido;
+	protected JMenuItem mntmConsultaPedido;
+	protected JMenuItem mntmAltaCliente;
 
 	
 
@@ -43,32 +43,32 @@ public class UI extends JFrame {
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		mnCleinte = new JMenu("Cliente");
-		menuBar.add(mnCleinte);
+		mnCliente = new JMenu("Cliente");
+		menuBar.add(mnCliente);
 		
-		mntmAlta = new JMenuItem("Alta");
-		mnCleinte.add(mntmAlta);
+		mntmAltaCliente = new JMenuItem("Alta");
+		mnCliente.add(mntmAltaCliente);
 		
-		mntmConsulta = new JMenuItem("Consulta");
-		mnCleinte.add(mntmConsulta);
+		mntmConsultaCliente = new JMenuItem("Consulta");
+		mnCliente.add(mntmConsultaCliente);
 		
-		mnNewMenu = new JMenu("Art\u00EDculo");
-		menuBar.add(mnNewMenu);
+		mnArticulo = new JMenu("Art\u00EDculo");
+		menuBar.add(mnArticulo);
 		
-		mntmAlta_1 = new JMenuItem("Alta");
-		mnNewMenu.add(mntmAlta_1);
+		mntmAltaArticulo = new JMenuItem("Alta");
+		mnArticulo.add(mntmAltaArticulo);
 		
-		mntmConsulta_1 = new JMenuItem("Consulta");
-		mnNewMenu.add(mntmConsulta_1);
+		mntmConsultaArticulo = new JMenuItem("Consulta");
+		mnArticulo.add(mntmConsultaArticulo);
 		
-		mnConsulta = new JMenu("Pedido");
-		menuBar.add(mnConsulta);
+		mnPedido = new JMenu("Pedido");
+		menuBar.add(mnPedido);
 		
-		mntmAlta_2 = new JMenuItem("Alta");
-		mnConsulta.add(mntmAlta_2);
+		mntmAltaPedido = new JMenuItem("Alta");
+		mnPedido.add(mntmAltaPedido);
 		
-		mntmConsulta_2 = new JMenuItem("Consulta");
-		mnConsulta.add(mntmConsulta_2);
+		mntmConsultaPedido = new JMenuItem("Consulta");
+		mnPedido.add(mntmConsultaPedido);
 		cardPane = new JPanel();
 		cardPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(cardPane);

@@ -13,6 +13,8 @@ public class AltaClientePane extends JPanel {
 	protected JTextField txtDNI;
 	protected JTextField txtNombre;
 	protected JTextField txtApellidos;
+	protected JButton btnCancelar;
+	protected JButton btnAlta;
 
 	/**
 	 * Create the panel.
@@ -42,7 +44,7 @@ public class AltaClientePane extends JPanel {
 		gbc_txtDNI.gridy = 1;
 		add(txtDNI, gbc_txtDNI);
 		
-		JButton btnAlta = new JButton("Alta");
+		btnAlta = new JButton("Alta");
 		GridBagConstraints gbc_btnAlta = new GridBagConstraints();
 		gbc_btnAlta.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnAlta.insets = new Insets(0, 0, 5, 5);
@@ -87,7 +89,7 @@ public class AltaClientePane extends JPanel {
 		gbc_txtApellidos.gridy = 5;
 		add(txtApellidos, gbc_txtApellidos);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar = new JButton("Cancelar");
 		GridBagConstraints gbc_btnCancelar = new GridBagConstraints();
 		gbc_btnCancelar.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnCancelar.insets = new Insets(0, 0, 5, 5);

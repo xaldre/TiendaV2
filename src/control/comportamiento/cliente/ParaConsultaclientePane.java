@@ -4,6 +4,8 @@ import java.awt.CardLayout;
 
 import control.comportamiento.ParaUI;
 import vista.cliente.ConsultaClientePane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ParaConsultaclientePane extends ConsultaClientePane {
 
@@ -14,10 +16,12 @@ public class ParaConsultaclientePane extends ConsultaClientePane {
 	 */
 	public ParaConsultaclientePane(ParaUI ui) {
 		this.ui = ui;
-
-		// TODO usar esto para cambiar de cards
-//		CardLayout layout = (CardLayout) ui.paraCardPane.getLayout();
-//		layout.show(ui.paraCardPane, "consultaPedido");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CardLayout layout = (CardLayout) ui.paraCardPane.getLayout();
+				layout.show(ui.paraCardPane, "hall");
+			}
+		});
 	}
 
 }

@@ -18,7 +18,7 @@ import java.awt.CardLayout;
 
 public class UI extends JFrame {
 
-	protected JPanel contentPane;
+	protected JPanel cardPane;
 	protected JMenuBar menuBar;
 	protected JMenu mnCleinte;
 	protected JMenu mnNewMenu;
@@ -69,10 +69,10 @@ public class UI extends JFrame {
 		
 		mntmConsulta_2 = new JMenuItem("Consulta");
 		mnConsulta.add(mntmConsulta_2);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(new CardLayout(0, 0));
+		cardPane = new JPanel();
+		cardPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(cardPane);
+		cardPane.setLayout(new CardLayout(0, 0));
 	}
 
 }

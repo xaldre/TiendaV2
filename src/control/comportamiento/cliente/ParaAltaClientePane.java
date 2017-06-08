@@ -14,6 +14,19 @@ public class ParaAltaClientePane extends AltaClientePane {
 	 * Create the panel.
 	 */
 	public ParaAltaClientePane(ParaUI ui) {
+		btnAlta.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+//				if (verifyData()) {
+//					Cliente cliente = generateDummy();
+//					if (!exists(cliente)){
+//						altaCliente();
+//					}
+//					
+//				}
+				
+				
+			}
+		});
 		this.ui = ui;
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -31,7 +31,7 @@ public class ParaUI extends UI {
 	public ParaAltaPedidoPane altaPedido = new ParaAltaPedidoPane(this);
 	public ParaConsultaPedidoPane consultaPedido = new ParaConsultaPedidoPane(this);
 	public JPanel paraCardPane = cardPane;
-	public JPanel hall = new ImagePanel("assets/tshirtRedLogo.png");
+	public JPanel hall = new ImagePanel("assets/background.png");
 
 	public ParaUI() {
 		paraCardPane.add(hall, "hall");

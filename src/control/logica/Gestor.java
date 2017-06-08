@@ -169,5 +169,10 @@ public class Gestor implements iGestorAlta, iGestorConsulta {
 			return -1;
 		}
 	}
+	
+	public boolean exist(Object obj) {
+		AdaptadorDAO adaptador = new AdaptadorDAO(tipo);
+		return adaptador.exist(obj);
+	}
 
 }

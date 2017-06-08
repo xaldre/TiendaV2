@@ -3,7 +3,6 @@ package control.logica;
 import java.awt.EventQueue;
 
 import control.comportamiento.ParaUI;
-import vista.UI;
 
 public class Principal {
 	/**

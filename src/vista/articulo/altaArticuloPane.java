@@ -14,6 +14,9 @@ import javax.swing.JButton;
 public class AltaArticuloPane extends JPanel {
     protected JTextField txtNombre;
     protected JTextField txtPrecio;
+    protected JButton btnCancelar;
+    protected JButton btnAlta;
+    protected JTextArea txtDescripcion;
  
     /**
      * Create the panel.
@@ -43,7 +46,7 @@ public class AltaArticuloPane extends JPanel {
          gbc_txtNombre.gridy = 1;
          add(txtNombre, gbc_txtNombre);
         
-         JButton btnAlta = new JButton("Alta");
+         btnAlta = new JButton("Alta");
          GridBagConstraints gbc_btnAlta = new GridBagConstraints();
          gbc_btnAlta.fill = GridBagConstraints.HORIZONTAL;
          gbc_btnAlta.insets = new Insets(0, 0, 5, 5);
@@ -77,7 +80,7 @@ public class AltaArticuloPane extends JPanel {
          gbc_lblDescripcion.gridy = 5;
          add(lblDescripcion, gbc_lblDescripcion);
          
-          JTextArea txtDescripcion = new JTextArea();
+          txtDescripcion = new JTextArea();
           txtDescripcion.setLineWrap(true);
           GridBagConstraints gbc_txtDescripcion = new GridBagConstraints();
           gbc_txtDescripcion.gridwidth = 3;
@@ -88,7 +91,7 @@ public class AltaArticuloPane extends JPanel {
           gbc_txtDescripcion.gridy = 5;
           add(txtDescripcion, gbc_txtDescripcion);
           
-           JButton btnCancelar = new JButton("Cancelar");
+           btnCancelar = new JButton("Cancelar");
            GridBagConstraints gbc_btnCancelar = new GridBagConstraints();
            gbc_btnCancelar.insets = new Insets(0, 0, 5, 5);
            gbc_btnCancelar.gridx = 4;
